@@ -1,5 +1,6 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -23,18 +24,18 @@ const Hero = () => {
           3 years across systems and networking with deep troubleshooting and support, plus 2 years building in PHP.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <a
-            href="/skills"
+          <Link
+            to="/skills"
             className="rounded-lg bg-gradient-to-r from-red-600 to-amber-500 px-4 py-2 text-sm font-semibold text-white shadow hover:from-red-500 hover:to-amber-400 focus:outline-none focus:ring-2 focus:ring-red-500/40"
           >
             Explore Skills
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className="rounded-lg border border-red-700/50 bg-black/40 px-4 py-2 text-sm font-semibold text-amber-200 backdrop-blur hover:bg-black/60 focus:outline-none focus:ring-2 focus:ring-amber-400/40"
           >
             Get In Touch
-          </a>
+          </Link>
         </div>
       </div>
     </section>

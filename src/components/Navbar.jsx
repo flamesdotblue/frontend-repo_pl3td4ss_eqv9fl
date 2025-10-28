@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Server, Shield, Code2 } from 'lucide-react';
+import { NavLink, Link } from 'react-router-dom';
+import { Server, Shield } from 'lucide-react';
 
 const NavItem = ({ to, children }) => (
   <NavLink
@@ -35,13 +35,13 @@ const Navbar = () => {
           <NavItem to="/experience">Experience</NavItem>
           <NavItem to="/contact">Contact</NavItem>
         </nav>
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-red-600 to-amber-500 px-3 py-2 text-sm font-semibold text-white shadow hover:from-red-500 hover:to-amber-400 md:hidden"
         >
           <Shield className="h-4 w-4" />
           Contact
-        </a>
+        </Link>
       </div>
     </header>
   );
