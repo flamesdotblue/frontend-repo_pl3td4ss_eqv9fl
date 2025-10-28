@@ -1,28 +1,37 @@
-import { useState } from 'react'
+import React from 'react';
+import Hero from './components/Hero';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-gradient-to-b from-emerald-50 via-white to-white text-gray-900">
+      {/* Hero with Spline 3D background */}
+      <Hero />
+
+      {/* Skills */}
+      <Skills />
+
+      {/* Experience */}
+      <Experience />
+
+      {/* Contact */}
+      <Contact />
+
+      {/* Footer */}
+      <footer className="mx-auto mt-8 max-w-6xl px-6 pb-10 text-sm text-muted-foreground">
+        <div className="flex flex-col items-center justify-between gap-3 border-t pt-6 md:flex-row">
+          <p>
+            © {new Date().getFullYear()} • Networking-focused Portfolio
+          </p>
+          <p className="text-center md:text-right">
+            Built with a focus on reliability, security, and clean infrastructure.
+          </p>
         </div>
-      </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
